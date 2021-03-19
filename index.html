@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sections/space-cards/space.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <title>Angie's Profile</title>
+</head>
+<body>
+    <!-- Profile Section -->
+    <div class="row">
+        <div class="column first">
+            <!-- About box -->
+            <div class="about">
+                <!-- Self Portrait -->
+                <div class="section">
+                    <img class="profilePicture" src="profile.jpg" alt="profile picture">
+                </div>
+                <!-- About details -->
+                <div class="section">
+                    <ul>
+                        <li>Angela Rus</li>
+                        <li>email: mind.edifice@gmail.com</li>
+                        <li>phone-number: 0040759599328</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- About text box -->
+        <div class="column second">
+            <h2>A bit about me:</h2>
+            <p>My name is Angela but I prefer Angie :)</p>
+            <p>I am curious about many things and I've explored different fields throughout my life.</p>
+            <button id="artButton" onClick="showArt()">Art</button>
+            <button id="psyButton"onClick="showPsy()">Psychology</button>
+            <button id="sciButton"onClick="showScience()">Science</button>
+            <button id="codeButton"onClick="showCode()">Coding</button>
+            <p id="art" class="hide">
+                I've attended a school with an art profile throughout middle and high school.
+                I love classical art, beautiful colours and painting. But I love other forms 
+                of art as well. During the same period I've shortly attended a theater course
+                and vocal training. I've also had a short phase in which I wrote poetry. So it
+                may sound like my inclination is towards humanities, but my interest for scientific
+                fields competes with my artistic inclination quite a bit.
+            </p>
+            <p id="psy" class="hide">
+                I have an analytical, logical type of thinking, and this prompted me to choose a 
+                field in which I can use this in a creative way. This is how I chose psychology,
+                since trying to figure out how minds work, seems to be as challenging intellectually,
+                as it is creative. During the first year, the subjects I loved the most were
+                neuroscience and behavioural genetics. But after doing lab research in these fields,
+                I found out that unfortunatelly, neuroscience is quite limited in explaining how
+                humans think, and so is genetic research.
+            </p>
+            <p id="science" class="hide">
+                Science is awesome! I take pleasure in watching astronomy 
+                (<a href="https://www.imdb.com/title/tt1832668/">
+                How the Universe Works</a> ) and physics documentaries 
+                ( <a href="https://www.imdb.com/title/tt8060080/?ref_=fn_al_tt_1">The Fabric of Cosmos</a> ). 
+                I am particularly interested in modern physics, and around the end of 2020, 
+                I got hooked on trying to understand quantum mechanics, particularly the double 
+                slit experiment. 
+            </p>
+            <p id="code" class="hide">
+                When I had studied Matlab as a course in my Psychology degree, I already knew a bit
+                of JavaScript probably from watching some online lecture. I've realized Matlab is not
+                a pretty language, particularly if you're trying to draw a picture with it, which
+                was what we had at some point in our course. That was weird, considering that Matlab
+                was created for data analysis. Anyway, I still enjoyed building functions and solving
+                problems. And when I've lost interest for lab research, I begun to study JavaScript,
+                CSS and HTML on my own.
+            </p>    
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <ul class="navbar">
+        <li class="nav" onClick="showSpaceProject()">I like Space</li>
+        <li class="nav" onClick="showArtProject()">Art</li>
+    </ul>
+    
+    <div id="space-cards-placeholder" class="project hide"></div>
+    <div id="my-art-placeholder" class="project hide">Hi</div>
+    
+    <script>
+        $(function() {
+            $("#space-cards-placeholder").load("sections/space-cards/space.html");
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
