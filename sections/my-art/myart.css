@@ -1,6 +1,8 @@
 .art-container {
     display: flex;
     overflow-x: auto;
+    padding: 0;
+    list-style-type: none;
 }
   
 .art-picture {
