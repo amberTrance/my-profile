@@ -53,7 +53,7 @@ a {
 }
 
 /* Button styling */
-button {
+.column button {
     border: none;
     padding: 8px 20px;
     text-align: center;
@@ -61,7 +61,8 @@ button {
     margin-bottom: 3px;
     border-radius: 3px;
     color: rgb(148, 233, 212);
-    background-color: rgb(13, 116, 116)   
+    background-color: rgb(13, 116, 116);
+    cursor: pointer;  
 }
 
 button:focus {
