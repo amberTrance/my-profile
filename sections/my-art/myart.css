@@ -1,0 +1,12 @@
+.art-container {
+    display: flex;
+    overflow-x: auto;
+}
+  
+.art-picture {
+    height: 70vh;
+}
+  
+.art-picture img {
+    max-height: 100%;
+}

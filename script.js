@@ -41,3 +41,9 @@ let showArtProject = () => {
     projects.forEach(project => project.classList.add('hide'))   
     artProject.classList.remove('hide')
 }
+
+// Add html projects inside the index.html page 
+$(function() {
+    $("#space-cards-placeholder").load("sections/space-cards/space.html");
+    $("#my-art-placeholder").load("sections/my-art/myart.html")
+});
