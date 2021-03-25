@@ -1,49 +1,66 @@
 // Script that toggles between hobby descriptions
-let art = document.getElementById('art')
-let psy = document.getElementById('psy')
-let science = document.getElementById('science')
-let code = document.getElementById('code')
+let art, psy, science, code
+art = document.getElementById('art')
+psy = document.getElementById('psy')
+science = document.getElementById('science')
+code = document.getElementById('code')
 
-let hobbies = [art, psy, science, code]
+// The default visible section is art
+let visibleHobby = art;
 
-let showArt = () => {
-    hobbies.forEach(hobby => hobby.classList.add('hide'))  
+// Function that adds 'hide' class 
+const hideHobby = () => {
+    visibleHobby.classList.add('hide')
+}
+
+const showArt = () => {
+    // Hide the currently visible section
+    hideHobby()
+    // Remove hide class from art section
     art.classList.remove('hide')
+    // Set the 'visible' variable to art
+    visibleHobby = art
 }
 
-let showPsy = () => {
-    hobbies.forEach(hobby => hobby.classList.add('hide'))   
+const showPsy = () => {
+    hideHobby()    
     psy.classList.remove('hide')
+    visibleHobby = psy
 }
 
-let showScience = () => {
-    hobbies.forEach(hobby => hobby.classList.add('hide'))   
+const showScience = () => {
+    hideHobby()    
     science.classList.remove('hide')
+    visibleHobby = science
 }
 
-let showCode = () => {
-    hobbies.forEach(hobby => hobby.classList.add('hide'))    
+const showCode = () => {
+    hideHobby()   
     code.classList.remove('hide')
+    visibleHobby = code
 }
 
 // Show Project by clicking on nav titles
-let spaceProject = document.getElementById('space-cards-placeholder')
-let artProject = document.getElementById('my-art-placeholder')
+let spaceProject, artProject
+spaceProject = document.getElementById('space-cards-placeholder')
+artProject = document.getElementById('my-art-placeholder')
 
-let projects = [spaceProject, artProject]
+let visibleProject = spaceProject;
 
-let showSpaceProject = () => {
-    projects.forEach(project => project.classList.add('hide'))   
+const showSpaceProject = () => {
+    visibleProject.classList.add('hide')  
     spaceProject.classList.remove('hide')
+    visibleProject = spaceProject;
 }
 
-let showArtProject = () => {
-    projects.forEach(project => project.classList.add('hide'))   
+const showArtProject = () => {
+    visibleProject.classList.add('hide')
     artProject.classList.remove('hide')
+    visibleProject = artProject
 }
 
 // Add html projects inside the index.html page 
 $(function() {
-    $("#space-cards-placeholder").load("sections/space-cards/space.html");
+    $("#space-cards-placeholder").load("sections/space-cards/space.html")
     $("#my-art-placeholder").load("sections/my-art/myart.html")
 });
