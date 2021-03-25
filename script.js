@@ -41,6 +41,8 @@ const showCode = () => {
 }
 
 // Show Project by clicking on nav titles
+let navbar = document.getElementById("navbar");
+
 let spaceProject, artProject
 spaceProject = document.getElementById('space-cards-placeholder')
 artProject = document.getElementById('my-art-placeholder')
@@ -48,22 +50,37 @@ xoProject = document.getElementById('xo-game-placeholder')
 
 let visibleProject = spaceProject;
 
+// Function that hides the previously visible project, and the navbar list
+const hideStuff = () => {
+    visibleProject.classList.add('hide')
+    navbar.classList.remove('responsive')
+}
+
 const showSpaceProject = () => {
-    visibleProject.classList.add('hide')  
+    hideStuff()  
     spaceProject.classList.remove('hide')
-    visibleProject = spaceProject;
+    visibleProject = spaceProject;    
 }
 
 const showArtProject = () => {
-    visibleProject.classList.add('hide')
+    hideStuff()  
     artProject.classList.remove('hide')
     visibleProject = artProject
 }
 
 const showXoProject = () => {
-    visibleProject.classList.add('hide')
+    hideStuff()  
     xoProject.classList.remove('hide')
     visibleProject = xoProject
+}
+
+// Function that gets called when you click on the navbar icon
+const toggleNavList = () => {
+    // If the navbar classes are 'navbar' when clicked, add class 'responsive'
+    navbar.className === "navbar" ?
+    navbar.classList.add("responsive") :
+    // If it already has a class of 'responsive', remove it
+    navbar.classList.remove("responsive")
 }
 
 // Add html projects inside the index.html page 
