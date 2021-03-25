@@ -44,6 +44,7 @@ const showCode = () => {
 let spaceProject, artProject
 spaceProject = document.getElementById('space-cards-placeholder')
 artProject = document.getElementById('my-art-placeholder')
+xoProject = document.getElementById('xo-game-placeholder')
 
 let visibleProject = spaceProject;
 
@@ -59,8 +60,15 @@ const showArtProject = () => {
     visibleProject = artProject
 }
 
+const showXoProject = () => {
+    visibleProject.classList.add('hide')
+    xoProject.classList.remove('hide')
+    visibleProject = xoProject
+}
+
 // Add html projects inside the index.html page 
 $(function() {
     $("#space-cards-placeholder").load("sections/space-cards/space.html")
     $("#my-art-placeholder").load("sections/my-art/myart.html")
+    $("#xo-game-placeholder").load("sections/xo-game/xo.html")
 });
