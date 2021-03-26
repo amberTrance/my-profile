@@ -4,14 +4,12 @@
     width: 350px;
     height: 350px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;    
 }
 
 .xo-square {
     border: 4px solid rgb(2, 32, 32);
     background-color: rgb(22, 129, 124);
-    font-size: 30px;
-    text-align: center;
     position: relative;
     display: flex;
     justify-content: center;
@@ -19,7 +17,7 @@
     cursor: pointer;
 }
 
-.o-sign {
+.o-sign, .x-sign {
     position: relative;
 }
 
@@ -30,10 +28,6 @@
     width: 75%;
     border: 5px solid white;
     border-radius: 50%;
-}
-
-.x-sign {
-    position: relative;
 }
 
 .x-sign:before, .x-sign:after {
@@ -53,4 +47,83 @@
 .x-sign:after{
     transform:rotate(-45deg);
     right:2px;
+}
+
+/* Win lines */
+.win-line-a, 
+.win-line-b, 
+.win-line-c,
+.win-line-1,
+.win-line-2,
+.win-line-3,
+.win-diagon-1,
+.win-diagon-2 {
+    position: relative;
+}
+
+.win-line-a:after, 
+.win-line-b:after, 
+.win-line-c:after {
+    content:'';
+    position: absolute;
+    width: 90%;
+    height: 5px;
+    background-color: orange;
+    border-radius: 5px;
+    margin-left: 17px;  
+}
+
+.win-line-a:after {
+    margin-top: 56px;
+}
+
+.win-line-b:after {
+    margin-top: 173px;
+}
+
+.win-line-c:after {
+    margin-top: 289px;
+}
+
+.win-line-1:after,
+.win-line-2:after,
+.win-line-3:after {
+    content:'';
+    position: absolute;
+    width: 5px;
+    height: 90%;
+    background-color:rgb(255, 153, 0);
+    border-radius: 5px;
+    margin-top: 17px;
+}
+
+.win-line-1:after {
+    margin-left: 56px;
+}
+
+.win-line-2:after {
+    margin-left: 173px;
+}
+
+.win-line-3:after {
+    margin-left: 289px;
+}
+
+.win-diagon-1:after,
+.win-diagon-2:after {
+    content:'';
+    position: absolute;
+    width: 5px;
+    background-color:rgb(255, 153, 0);
+    border-radius: 5px;
+    margin-left: 175px;
+    height: 100%;
+}
+
+.win-diagon-1:after {
+    transform:rotate(-45deg);
+}
+
+.win-diagon-2:after {
+    transform:rotate(45deg);
 }
