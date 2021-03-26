@@ -59,6 +59,7 @@
 .win-diagon-1,
 .win-diagon-2 {
     position: relative;
+    pointer-events: none;
 }
 
 .win-line-a:after, 
