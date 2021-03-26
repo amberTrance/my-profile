@@ -63,7 +63,7 @@ a {
     border: none;
     padding: 8px 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 3px;
     border-radius: 3px;
     color: rgb(148, 233, 212);
@@ -77,7 +77,8 @@ button:active {
 }
 
 button:focus {
-    outline:none;
+    outline: none;
+    color: white;
 }
 
 /* Navbar */
@@ -97,6 +98,10 @@ button:focus {
     float: left;
     padding: 20px;
     cursor: pointer;
+}
+
+.navbar li:hover {
+    color: white;
 }
 
 @media (max-width: 1024px) {

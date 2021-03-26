@@ -45,7 +45,7 @@ let visibleProject = spaceProject;
 
 const showProject = (project) => {
 
-    // Function that hides the previously visible project, and the navbar list
+    // Hides the previously visible project, and the navbar list
     visibleProject.classList.add('hide')
     navbar.classList.remove('responsive')
 
@@ -58,7 +58,7 @@ const showProject = (project) => {
             artProject.classList.remove('hide')
             visibleProject = artProject
             break
-        case 'xo':
+        default:
             xoProject.classList.remove('hide')
             visibleProject = xoProject        
     }   
