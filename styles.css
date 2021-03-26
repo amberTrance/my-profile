@@ -132,7 +132,6 @@ button:focus {
 
     .navbar.responsive {
         position: relative;
-        display: block;
         width: 100%;
         text-align: left;
     }

@@ -8,36 +8,29 @@ code = document.getElementById('code')
 // The default visible section is art
 let visibleHobby = art;
 
-// Function that adds 'hide' class 
-const hideHobby = () => {
-    visibleHobby.classList.add('hide')
-}
-
-const showArt = () => {
+const showHobby = (hobby) => {
     // Hide the currently visible section
-    hideHobby()
-    // Remove hide class from art section
-    art.classList.remove('hide')
-    // Set the 'visible' variable to art
-    visibleHobby = art
-}
+    visibleHobby.classList.add('hide')
 
-const showPsy = () => {
-    hideHobby()    
-    psy.classList.remove('hide')
-    visibleHobby = psy
-}
-
-const showScience = () => {
-    hideHobby()    
-    science.classList.remove('hide')
-    visibleHobby = science
-}
-
-const showCode = () => {
-    hideHobby()   
-    code.classList.remove('hide')
-    visibleHobby = code
+    switch (hobby) {
+        case 'art':
+            // Remove hide class from art section
+            art.classList.remove('hide')
+            // Set the 'visible' variable to art
+            visibleHobby = art
+            break
+        case 'psy':
+            psy.classList.remove('hide')
+            visibleHobby = psy
+            break
+        case 'science':
+            science.classList.remove('hide')
+            visibleHobby = science
+            break
+        default:
+            code.classList.remove('hide')
+            visibleHobby = code
+    }
 }
 
 // Show Project by clicking on nav titles
@@ -50,28 +43,25 @@ xoProject = document.getElementById('xo-game-placeholder')
 
 let visibleProject = spaceProject;
 
-// Function that hides the previously visible project, and the navbar list
-const hideStuff = () => {
+const showProject = (project) => {
+
+    // Function that hides the previously visible project, and the navbar list
     visibleProject.classList.add('hide')
     navbar.classList.remove('responsive')
-}
 
-const showSpaceProject = () => {
-    hideStuff()  
-    spaceProject.classList.remove('hide')
-    visibleProject = spaceProject;    
-}
-
-const showArtProject = () => {
-    hideStuff()  
-    artProject.classList.remove('hide')
-    visibleProject = artProject
-}
-
-const showXoProject = () => {
-    hideStuff()  
-    xoProject.classList.remove('hide')
-    visibleProject = xoProject
+    switch (project) {
+        case 'space':
+            spaceProject.classList.remove('hide')
+            visibleProject = spaceProject
+            break
+        case 'myart':
+            artProject.classList.remove('hide')
+            visibleProject = artProject
+            break
+        case 'xo':
+            xoProject.classList.remove('hide')
+            visibleProject = xoProject        
+    }   
 }
 
 // Function that gets called when you click on the navbar icon
