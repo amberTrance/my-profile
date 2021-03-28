@@ -128,3 +128,16 @@
 .win-diagon-2:after {
     transform:rotate(45deg);
 }
+
+.xo-button {
+    display: flex;
+    margin: auto;
+    font-size: 25px;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(185, 130, 27);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
