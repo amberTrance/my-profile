@@ -2,6 +2,7 @@ const squares = document.querySelectorAll('.xo-square')
 const xoButton = document.getElementById('xo-button');
 const xoContainer = document.getElementById('xo-container');
 
+// Reset button
 xoButton.addEventListener('click', () => {
     squares.forEach(square => {
         square.className = "xo-square"
@@ -9,15 +10,8 @@ xoButton.addEventListener('click', () => {
     xoContainer.className = "xo-container"
 })
 
-// Center and corner squares
-let a1, a3, b2, c1, c3
-a1 = document.getElementById('a1')
-a3 = document.getElementById('a1')
-b2 = document.getElementById('b2')
-c1 = document.getElementById('c1')
-c3 = document.getElementById('c3')
-
-const corners = [a1, a3, c1, c3]
+// Save corners in an array
+const corners = [squares[0], squares[2], squares[6], squares[8]]
 
 // When clicking a square:
 squares.forEach(square => {
@@ -47,9 +41,9 @@ squares.forEach(square => {
             if ( xoContainer.className === "xo-container" ) {
                 // For first round
                 if (leftSquares.length === 8) {
-                    // Check if b2 (the center) is free, and start with it if so
-                    if ( b2.className === 'xo-square' ) {                    
-                        b2.classList.add('x-sign')
+                    // Check if the center, the 4th index, is free, and start with it if so
+                    if ( squares[4].className === 'xo-square' ) {                    
+                        squares[4].classList.add('x-sign')
                     } else {
                         // else, pick one of the corners at random
                         let corner = corners[Math.floor(Math.random() * 4)]
