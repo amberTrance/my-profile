@@ -19,7 +19,7 @@ squares.forEach(square => {
 
         // If the user clicks on a non-empty square, do nothing
         if (
-            square.classList.contains('o-sign') 
+            square.classList.contains('o-sign')
             ||
             square.classList.contains('x-sign')
         ) {
@@ -31,23 +31,23 @@ squares.forEach(square => {
 
 
             // Grab the leftover squares
-            let leftSquares = [...squares].filter(square => (!square.classList.contains('o-sign')) 
+            let leftSquares = [...squares].filter(square => (!square.classList.contains('o-sign'))
             & (!square.classList.contains('x-sign')))
 
             checkWinning(leftSquares)
-            
+
             // Computer moves:
             // First make sure the xoContainer only has the default class and not the win class
             if ( xoContainer.className === "xo-container" ) {
                 // For first round
                 if (leftSquares.length === 8) {
                     // Check if the center, the 4th index, is free, and start with it if so
-                    if ( squares[4].className === 'xo-square' ) {                    
+                    if ( squares[4].className === 'xo-square' ) {
                         squares[4].classList.add('x-sign')
                     } else {
                         // else, pick one of the corners at random
                         let corner = corners[Math.floor(Math.random() * 4)]
-                        corner.classList.add('x-sign')                  
+                        corner.classList.add('x-sign')
                     }
                 } else if (leftSquares.length <= 6) {
                     // for the following moves, pick an empty square at random
@@ -67,7 +67,7 @@ const checkWinning = (leftSquares) => {
     /* Check for winning only once there are less than 5 squares left
     and the container class doesn't already have an additional win class */
     if ( leftSquares.length < 5 & xoContainer.className === "xo-container") {
-                
+
         /* If the first row of 3 all have o-sign or x-sign, 
         add a class of win-line-a which crosses the first row*/
         if ( 
@@ -91,9 +91,9 @@ const checkWinning = (leftSquares) => {
             squares[4].className === "xo-square x-sign" &
             squares[5].className === "xo-square x-sign"
         ) {
-            
+
             xoContainer.classList.add('win-line-b')
-            
+
         } else if (
             squares[6].className === "xo-square o-sign" &
             squares[7].className === "xo-square o-sign" &
@@ -117,7 +117,7 @@ const checkWinning = (leftSquares) => {
         ) {
 
             xoContainer.classList.add('win-line-1')
-            
+
         } else if (
             squares[1].className === "xo-square o-sign" &
             squares[4].className === "xo-square o-sign" &

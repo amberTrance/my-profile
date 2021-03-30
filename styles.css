@@ -2,7 +2,7 @@
 body {
     margin: auto;
     font-family: "Muli", sans-serif;
-    background-color:rgb(2, 32, 32);    
+    background-color:rgb(2, 32, 32);
 }
 
 a {
@@ -55,7 +55,7 @@ a {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 /* Button styling */
@@ -146,4 +146,10 @@ button:focus {
     .row {
       flex-direction: column;
     }
+}
+
+#quotes-placeholder {
+    display:flex;
+    width: 100%;
+    justify-content: center;
 }

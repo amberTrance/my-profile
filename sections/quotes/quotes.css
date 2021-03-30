@@ -1,0 +1,72 @@
+.qcontainer {
+    text-align: center;
+    margin: 40px;
+    border-radius: 20px;
+    padding: 30px;
+    color: rgb(245, 252, 209);
+}
+
+.qbtn {
+    padding: 12px 25px;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(67, 106, 189);
+    color: white;
+    margin: 20px 0px;
+}
+
+.qcontainer h2, .qcontainer h3 {
+    letter-spacing: 2px;
+}
+
+#quote-id {
+    left:0;
+    width:100%;
+    float: left;
+    border: 2px rgba(255, 255, 255, 0.185) solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#qflex {
+    display: flex;
+    flex-direction: column;
+}
+
+#quote {
+    padding: 10px;
+}
+
+:disabled {
+    background-color: grey;
+
+}
+
+/* Card styles */
+.quoteStyle1 {
+    background-color:rgba(124, 142, 243, 0.301);
+    
+}
+
+.quoteStyle2 {
+    background-color:rgba(243, 124, 227, 0.301);
+}
+
+.quoteStyle3 {
+    background-color:rgba(243, 181, 124, 0.301);
+}
+
+.quoteStyle4 {
+    background-color:rgba(124, 243, 134, 0.301);
+}
+
+@media (max-width: 600px) {
+    .qcontainer {
+        margin: 10px;
+    }
+}

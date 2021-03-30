@@ -1,3 +1,5 @@
+"use strict";
+
 // Script that toggles between hobby descriptions
 let art, psy, science, code
 art = document.getElementById('art')
@@ -36,10 +38,11 @@ const showHobby = (hobby) => {
 // Show Project by clicking on nav titles
 let navbar = document.getElementById("navbar");
 
-let spaceProject, artProject
+let spaceProject, artProject, xoProject, quotesProject
 spaceProject = document.getElementById('space-cards-placeholder')
 artProject = document.getElementById('my-art-placeholder')
 xoProject = document.getElementById('xo-game-placeholder')
+quotesProject = document.getElementById('quotes-placeholder')
 
 let visibleProject = spaceProject;
 
@@ -58,10 +61,14 @@ const showProject = (project) => {
             artProject.classList.remove('hide')
             visibleProject = artProject
             break
-        default:
+        case 'xo':
             xoProject.classList.remove('hide')
-            visibleProject = xoProject        
-    }   
+            visibleProject = xoProject
+            break
+        case 'quotes':
+            quotesProject.classList.remove('hide')
+            visibleProject = quotesProject
+    }
 }
 
 // Function that gets called when you click on the navbar icon
@@ -78,4 +85,5 @@ $(function() {
     $("#space-cards-placeholder").load("sections/space-cards/space.html")
     $("#my-art-placeholder").load("sections/my-art/myart.html")
     $("#xo-game-placeholder").load("sections/xo-game/xo.html")
+    $("#quotes-placeholder").load("sections/quotes/quotes.html")
 });
