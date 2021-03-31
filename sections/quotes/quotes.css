@@ -2,8 +2,10 @@
     text-align: center;
     margin: 40px;
     border-radius: 20px;
+    border: 1px inset rgb(67, 106, 189);
     padding: 30px;
-    color: rgb(245, 252, 209);
+    color: white;
+    width: 50%;
 }
 
 .qbtn {
@@ -13,7 +15,8 @@
     border: none;
     background-color: rgb(67, 106, 189);
     color: white;
-    margin: 20px 0px;
+    margin: 20px 0px 40px 0px;
+    cursor: pointer;
 }
 
 .qcontainer h2, .qcontainer h3 {
@@ -22,15 +25,15 @@
 
 #quote-id {
     left:0;
-    width:100%;
     float: left;
-    border: 2px rgba(255, 255, 255, 0.185) solid;
+    border: 2px rgba(67, 106, 189, 0.473) solid;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4px;
 }
 
 #qflex {
@@ -44,7 +47,21 @@
 
 :disabled {
     background-color: grey;
+    cursor: default;
+}
 
+.qline {
+    width: 250px;
+    height: 4px;
+    background-color: rgb(167, 166, 166);
+    margin: auto;
+    cursor: pointer;
+}
+
+.qprog {
+    height: 4px;
+    width: 0%;
+    background-color: rgb(56, 92, 252);
 }
 
 /* Card styles */
@@ -54,19 +71,26 @@
 }
 
 .quoteStyle2 {
-    background-color:rgba(243, 124, 227, 0.301);
+    background-color:rgba(133, 76, 172, 0.473);
 }
 
 .quoteStyle3 {
-    background-color:rgba(243, 181, 124, 0.301);
+    background-color:rgba(243, 181, 124, 0.397);
 }
 
 .quoteStyle4 {
     background-color:rgba(124, 243, 134, 0.301);
 }
 
+@media (max-width: 1024px) {
+    .qcontainer {
+        width: 80%;
+    }
+}
+
 @media (max-width: 600px) {
     .qcontainer {
         margin: 10px;
+        width: 90%;
     }
 }
