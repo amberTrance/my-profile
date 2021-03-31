@@ -64,6 +64,10 @@
     background-color: rgb(56, 92, 252);
 }
 
+#author {
+    color: rgba(255, 255, 255, 0.548);
+}
+
 /* Card styles */
 .quoteStyle1 {
     background-color:rgba(124, 142, 243, 0.301);
