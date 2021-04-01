@@ -38,11 +38,12 @@ const showHobby = (hobby) => {
 // Show Project by clicking on nav titles
 let navbar = document.getElementById("navbar");
 
-let spaceProject, artProject, xoProject, quotesProject
+let spaceProject, artProject, xoProject, quotesProject, colorTrailProject
 spaceProject = document.getElementById('space-cards-placeholder')
 artProject = document.getElementById('my-art-placeholder')
 xoProject = document.getElementById('xo-game-placeholder')
 quotesProject = document.getElementById('quotes-placeholder')
+colorTrailProject = document.getElementById('color-trail-placeholder')
 
 let visibleProject = spaceProject;
 
@@ -68,6 +69,10 @@ const showProject = (project) => {
         case 'quotes':
             quotesProject.classList.remove('hide')
             visibleProject = quotesProject
+            break
+        case 'color':
+            colorTrailProject.classList.remove('hide')
+            visibleProject = colorTrailProject  
     }
 }
 
@@ -86,4 +91,5 @@ $(function() {
     $("#my-art-placeholder").load("sections/my-art/myart.html")
     $("#xo-game-placeholder").load("sections/xo-game/xo.html")
     $("#quotes-placeholder").load("sections/quotes/quotes.html")
+    $("#color-trail-placeholder").load("sections/color-trail/trail.html")
 });
