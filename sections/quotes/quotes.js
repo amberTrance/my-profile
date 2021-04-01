@@ -41,7 +41,6 @@ generateQuote(quoteIndex)
 
 
 
-
 // Change card color function
 const changeStyle = () => {
 
@@ -51,7 +50,6 @@ const changeStyle = () => {
     qcontainer.classList.add(quoteStyles[Math.floor(Math.random() * quoteStyles.length)])
 
 }
-
 
 
 
@@ -79,7 +77,6 @@ qnext.addEventListener('click', () => {
     changeStyle()
 
 })
-
 
 
 
@@ -111,7 +108,6 @@ qback.addEventListener('click', () => {
 
 
 
-
 // Event listener for clicking on progress line
 qline.addEventListener('click', function(e) {
 
@@ -133,11 +129,11 @@ qline.addEventListener('click', function(e) {
     if (quoteIndex === 1642) {
         qnext.disabled = true
     }
-    // Disable back button  
+    // Disable back button when index is 0
     if (quoteIndex === 0) {
         qback.disabled = true      
     }
-    // Enable next button
+    // Enable next button when index is lower than max
     if (quoteIndex < 1642) {
         qnext.disabled = false
     }
@@ -145,5 +141,4 @@ qline.addEventListener('click', function(e) {
     generateQuote(quoteIndex)
 
     changeStyle()
-
 });

@@ -6,6 +6,7 @@
     padding: 30px;
     color: white;
     width: 50%;
+    transition: background-color 0.5s; 
 }
 
 .qbtn {
