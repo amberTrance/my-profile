@@ -1,8 +1,8 @@
 .tcontainer {
     display: flex;
     flex-wrap: wrap;
-    width: 350px;
-    height: 500px;
+    width: 500px;
+    height: 400px;
     margin: auto;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -15,4 +15,17 @@
     height: 13px;
     margin: 1px;
     border-radius: 50%;
+}
+
+@media (max-width: 540px) {
+    .tcontainer {
+        width: 350px;
+        height: 500px;
+    }
+
+    .colorbox {
+        width: 13px;
+        height: 13px;
+        margin: 1px;
+    }
 }

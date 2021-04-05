@@ -1,6 +1,6 @@
 const squares = document.querySelectorAll('.xo-square')
-const xoButton = document.getElementById('xo-button');
-const xoContainer = document.getElementById('xo-container');
+const xoButton = document.getElementById('xo-button')
+const xoContainer = document.getElementById('xo-container')
 
 // Reset button
 xoButton.addEventListener('click', () => {
@@ -51,9 +51,8 @@ squares.forEach(square => {
                     }
                 } else if (leftSquares.length <= 6) {
                     // for the following moves, pick an empty square at random
-                    const random = Math.floor(Math.random() * leftSquares.length);
+                    const random = Math.floor(Math.random() * leftSquares.length)
                     leftSquares[random].classList.add('x-sign')
-                    let x = leftSquares[random].id
                 }
             }
 
