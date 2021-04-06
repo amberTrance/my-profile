@@ -1,6 +1,12 @@
 const choiceInput = document.querySelector(".choiceInput")
 const choicesBox = document.querySelector(".choices")
+const choiceInfo = document.querySelector(".choiceInfo")
+const description = document.getElementById("description")
 
+// Toggles on and off the visibility of app info
+choiceInfo.addEventListener("click", () => {
+    description.classList.toggle('hide')
+})
 
 choiceInput.addEventListener("keyup", event => {
     // Save values
@@ -28,9 +34,12 @@ choiceInput.addEventListener("keyup", event => {
         choicesBox.appendChild(span)
     })
     
-    if (event.key === 'Enter') {
+    // On enter
+    if (event.key === 'Enter' && values.length > 1) {
+        // Clear input
         event.target.value = ''
 
+        // Start randomization of choices
         choiceRandomizer()
     }
 
@@ -38,22 +47,34 @@ choiceInput.addEventListener("keyup", event => {
 
 
 const choiceRandomizer = () => {
+    // Grab all the choices
     let choices = document.querySelectorAll(".choice")
+    
+    // Set a counter for the setInterval loop
     let x = 0;
-    let interval = setInterval(() => {
-        let choice = choices[Math.floor(Math.random() * choices.length)]
 
+    let interval = setInterval(() => {
+        // select and save a choice by a random index
+        let choice = choices[Math.round(Math.random() * (choices.length - 1))]
+
+        // add a class of random to choice, which highlights it
         choice.classList.add('random')
 
+        // 150 ms later, the class is removed
         setTimeout(() => {
             choice.classList.remove('random')
         }, 150)
 
+        // Increment x
         x++
+
+        // After x is larger then 30
         if (x > 30) {
+            // highlight the last picked choice
             setTimeout(() => {
                 choice.classList.add('random')
             }, 150)
+            // clear interval
             clearInterval(interval)           
         }
     }, 150)
