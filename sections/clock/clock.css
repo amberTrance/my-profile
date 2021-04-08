@@ -25,7 +25,7 @@
     left: 125px;
     transform: translateY(-50%) translateX(-50%);
     background-color: white;
-    z-index: 1;
+    z-index: 3;
 }
 
 #second, #minute, #hour {
@@ -41,7 +41,8 @@
     height: 105px;
     width: 3px;
     top: 20px;
-    background-color:rgb(10, 17, 17);   
+    background-color:rgb(10, 17, 17);
+    z-index: 2;
 }
 
 #minute {
@@ -66,4 +67,13 @@
 
 #clock-placeholder {
     position: relative;
+}
+
+#date {
+    position: absolute;
+    top: 50px;
+    margin-left: 50%;
+    color: rgba(51, 218, 218, 0.568);
+    transform: translateX(-50%);
+    z-index: 1;
 }
