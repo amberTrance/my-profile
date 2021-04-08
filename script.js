@@ -39,13 +39,14 @@ const showHobby = (hobby) => {
 let navbar = document.getElementById("navbar");
 
 let spaceProject, artProject, xoProject, quotesProject, colorTrailProject,
-choicePickProject
+choicePickProject, clockProject
 spaceProject = document.getElementById('space-cards-placeholder')
 artProject = document.getElementById('my-art-placeholder')
 xoProject = document.getElementById('xo-game-placeholder')
 quotesProject = document.getElementById('quotes-placeholder')
 colorTrailProject = document.getElementById('color-trail-placeholder')
 choicePickProject = document.getElementById('choice-picker-placeholder')
+clockProject = document.getElementById('clock-placeholder')
 
 let visibleProject = spaceProject;
 
@@ -79,6 +80,10 @@ const showProject = (project) => {
         case 'choice':
             choicePickProject.classList.remove('hide')
             visibleProject = choicePickProject
+            break
+        case 'clock':
+            clockProject.classList.remove('hide')
+            visibleProject = clockProject
     }
 }
 
@@ -99,4 +104,5 @@ $(function() {
     $("#quotes-placeholder").load("sections/quotes/quotes.html")
     $("#color-trail-placeholder").load("sections/color-trail/trail.html")
     $("#choice-picker-placeholder").load("sections/choice-picker/choice.html")
+    $("#clock-placeholder").load("sections/clock/clock.html")
 });
