@@ -1,18 +1,18 @@
 /* Space Panels */
 .img1 {
-    background-image: url(img/first.jpg);
-}
-
-.img2 {
     background-image: url(img/second.jpg);
 }
 
-.img3 {
+.img2 {
     background-image: url(img/third.jpg);
 }
 
-.img4 {
+.img3 {
     background-image: url(img/fourth.jpg);
+}
+
+.img4 {  
+    background-image: url(img/first.jpg);
 }
 
 .img5 {
