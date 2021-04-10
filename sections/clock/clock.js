@@ -9,7 +9,7 @@ var min = d.getMinutes();
 var sec = d.getSeconds();
 var h = d.getHours()
 // Add date on clock
-date.innerText = `${d.getDay()}.${d.getDate()}.${d.getFullYear()}`
+date.innerText = `${d.getDate()}.${d.getMonth()+1}.${d.getFullYear()}`
 
 // For every second, increment 6 degrees (360deg / 60sec = 6)
 let sdeg = 6 * sec
