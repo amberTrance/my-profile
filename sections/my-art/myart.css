@@ -12,3 +12,24 @@
 .art-picture img {
     max-height: 100%;
 }
+
+.art-container::-webkit-scrollbar {
+    height: 15px;
+    position: absolute;
+    margin-top: 0px;
+  }
+  
+  /* Track */
+.art-container::-webkit-scrollbar-track {
+    background: black;
+}
+  
+  /* Handle */
+.art-container::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+.art-container ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
