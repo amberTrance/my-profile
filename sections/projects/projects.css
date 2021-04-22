@@ -29,10 +29,17 @@
     background-color: rgba(128, 128, 128, 0.185);
     margin: 10px;
     border-radius: 10px;
+    word-wrap: break-word;
 }
 
 @media (max-width: 1000px) {
     .refContainer {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 361px) {
+    .refContainer ul {
+        padding: 0px;
     }
 }
