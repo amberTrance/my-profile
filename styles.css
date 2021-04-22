@@ -62,7 +62,6 @@ li span {
     flex: 2;
     margin: 0px;
     padding: 0px;
-    align-items: stretch;
 }
 
 .aboutme {
@@ -186,11 +185,18 @@ button:focus {
         width: 100%;
         text-align: left;
     }
+
 }
 
 @media (max-width: 600px) {
     .row {
       flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        flex-direction: column;
     }
 }
 
