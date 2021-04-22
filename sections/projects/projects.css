@@ -26,6 +26,9 @@
 
 .refBox {
     padding: 30px;
+    background-color: rgba(128, 128, 128, 0.185);
+    margin: 10px;
+    border-radius: 10px;
 }
 
 @media (max-width: 1000px) {
