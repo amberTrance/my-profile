@@ -1,0 +1,35 @@
+.refContainer {
+    margin: 30px;
+    display: flex;
+}
+
+.refContainer h2, .refContainer span {
+    color: rgb(141, 218, 218);
+}
+
+.refContainer p {
+    color: white;
+}
+
+.refContainer a:hover {
+    color: white;
+}
+
+.tech {
+    color: rgb(235, 102, 53);
+}
+
+.refContainer li {
+    color:rgb(60, 85, 168);
+    margin: 10px;
+}
+
+.refBox {
+    padding: 30px;
+}
+
+@media (max-width: 1000px) {
+    .refContainer {
+        flex-direction: column;
+    }
+}

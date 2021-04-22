@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,9 @@
     <link rel="stylesheet" href="sections/color-trail/trail.css">
     <link rel="stylesheet" href="sections/choice-picker/choice.css">
     <link rel="stylesheet" href="sections/clock/clock.css">
+    <link rel="stylesheet" href="sections/projects/projects.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="icon" href="lotus.jpg" type="image/jpg" sizes="16x16">
     <title>Angie's Profile</title>
 </head>
 <body>
@@ -30,7 +31,9 @@
                 <div class="section">
                     <ul>
                         <li><span>Angela Rus</span></li>
-                        <li><span>email: </span> mind.edifice@gmail.com</li>
+                        <li><span>email: </span>
+                            <a href="mailto:mind.edifice@gmail.com"> mind.edifice@gmail.com </a>
+                        </li>
                         <li><span>phone-number: </span> 0040759599328</li>
                         <li><span>source-code: </span><a href="https://github.com/amberTrance/my-profile" target="_blank">github.com/amberTrance/my-profile</a></li>
                     </ul>
@@ -96,6 +99,7 @@
         <li class="nav" onClick="showProject('color')">ColorTrail</li>
         <li class="nav" onClick="showProject('choice')">ChoiceMaker</li>
         <li class="nav" onClick="showProject('clock')">Clock</li>
+        <li class="nav" onClick="showProject('projects')">Projects</li>
         <li class="nav icon" onClick="toggleNavList()">&#9776;</li>
     </ul>
     
@@ -106,7 +110,9 @@
     <div id="color-trail-placeholder" class="project hide"></div>
     <div id="choice-picker-placeholder" class="project hide"></div>
     <div id="clock-placeholder" class="project hide"></div>
+    <div id="projects-placeholder" class="project hide"></div>
 
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
