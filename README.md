@@ -1,5 +1,4 @@
 # Vanilla JavaScript Personal Profile Project
-This is a project in which I aim to learn vanilla JavaScript skills, along with CSS and HTML. 
-
-##### Status
-In progress
+This is my personal portofolio, whose aim was to build a few projects in which I
+can learn DOM manipulation and CSS, but which I can also have fun building and using.
+Futhermore, it serves as an entry point to my future projects.
