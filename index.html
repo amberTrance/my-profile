@@ -42,51 +42,60 @@
         </div>
         <!-- About text box -->
         <div class="column second">
-            <h2>A bit about me:</h2>
-            <p>
-                My name is Angela but I prefer Angie :). I have built this webpage in vanilla JavaScript, 
-                HTML and CSS. I am currently learning how to code and studying german.
-                I like many different things and I've explored various fields throughout my life:
-            </p>
-            <button onClick="showHobby('art')">Art</button>
-            <button onClick="showHobby('psy')">Psychology</button>
-            <button onClick="showHobby('science')">Science</button>
-            <button onClick="showHobby('code')">Coding</button>
-            <p id="art">
-                I've attended a school with an art profile throughout middle and high school.
-                I love classical art, beautiful colours and painting. But I love other forms 
-                of art as well. During the same period, I've shortly attended a theatre course
-                and vocal training. I've also had a short phase in which I wrote poetry.
-            </p>
-            <p id="psy" class="hide">
-                At the end of highschool I've realized that I want to have a job
-                that is intellectually stimulating. Philosophy was interesting to me, but 
-                I wanted something that is also applied. This is how I chose psychology.
-                Studying the human mind remains for me one of the most interesting and challenging
-                topics. However, I was not pleased with the current experimental approach and decided
-                to leave the field.
-            </p>
-            <p id="science" class="hide">
-                If we leave the ethical aspects aside, scientific thinking and its discoveries 
-                are, in my opinion, the most beautiful achievements of humanity. 
-                I find it fascinating, for instance,
-                that astronomers can tell the composition of distant stars and planets from the light 
-                wavelength received from those bodies. Or how a geologist can tell that a skeleton 
-                dates from these many million years ago because of the ground layer in which it finds
-                itself. This is why I love watching various documentaries, and among my favourite are
-                those of modern physics.
-            </p>
-            <p id="code" class="hide">
-                Coding contains in it many of the things I love. It always starts with a problem
-                "How do I make this?". And to answer, you need to think creatively, logically, and
-                 also, to figure out the best implementation. Furthermore, you can perpetually learn new things, be 
-                 surprised by what you can do, and take delight in getting better and better. This is
-                 how I came to conclude that being a software developer is probably the best job for me.
-                 In contrast, a neuroscientist career, which is what I have considered before, is 
-                 perhaps 5% creative thinking, 45% reading other people's work, and the other 50% is a
-                 mixture of repetitive lab work, writing technical papers and pleading for funding, among
-                 other things. So, coding it is!! :D
-            </p>    
+            <div class="aboutme">
+                <h2>A bit about me:</h2>
+                <p>
+                    My name is Angela but I prefer Angie :). I have built this webpage in vanilla JavaScript, 
+                    HTML and CSS. I am currently learning how to code and studying german.
+                    I like many different things and I've explored various fields throughout my life:
+                 </p>
+            </div>
+
+            <div class="hobbies">
+                <div class="hobbies-btn">
+                    <button onClick="showHobby('art')">Art</button>
+                    <button onClick="showHobby('psy')">Psychology</button>
+                    <button onClick="showHobby('science')">Science</button>
+                    <button onClick="showHobby('code')">Coding</button>
+                </div>
+                <div class="hobbies-text">
+                    <p id="art">
+                        I've attended a school with an art profile throughout middle and high school.
+                        I love classical art, beautiful colours and painting. But I love other forms 
+                        of art as well. During the same period, I've shortly attended a theatre course
+                        and vocal training. I've also had a short phase in which I wrote poetry.
+                    </p>
+                    <p id="psy" class="hide">
+                        At the end of highschool I've realized that I want to have a job
+                        that is intellectually stimulating. Philosophy was interesting to me, but 
+                        I wanted something that is also applied. This is how I chose psychology.
+                        Studying the human mind remains for me one of the most interesting and challenging
+                        topics. However, I was not pleased with the current experimental approach and decided
+                        to leave the field.
+                    </p>
+                    <p id="science" class="hide">
+                        If we leave the ethical aspects aside, scientific thinking and its discoveries 
+                        are, in my opinion, the most beautiful achievements of humanity. 
+                        I find it fascinating, for instance,
+                        that astronomers can tell the composition of distant stars and planets from the light 
+                        wavelength received from those bodies. Or how a geologist can tell that a skeleton 
+                        dates from these many million years ago because of the ground layer in which it finds
+                        itself. This is why I love watching various documentaries, and among my favourite are
+                        those of modern physics.
+                    </p>
+                    <p id="code" class="hide">
+                        Coding contains in it many of the things I love. It always starts with a problem
+                        "How do I make this?". And to answer, you need to think creatively, logically, and
+                         also, to figure out the best implementation. Furthermore, you can perpetually learn new things, be 
+                         surprised by what you can do, and take delight in getting better and better. This is
+                         how I came to conclude that being a software developer is probably the best job for me.
+                         In contrast, a neuroscientist career, which is what I have considered before, is 
+                         perhaps 5% creative thinking, 45% reading other people's work, and the other 50% is a
+                         mixture of repetitive lab work, writing technical papers and pleading for funding, among
+                         other things. So, coding it is!! :D
+                    </p> 
+                </div>
+            </div>   
         </div>
     </div>
 

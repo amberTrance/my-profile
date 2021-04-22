@@ -59,8 +59,34 @@ li span {
 .column.second {
     background-color:rgb(24, 7, 71);
     color:rgb(156, 128, 231);
-    padding-left: 20px;
     flex: 2;
+    margin: 0px;
+    padding: 0px;
+    align-items: stretch;
+}
+
+.aboutme {
+    background-color:rgb(26, 10, 70);
+    margin: 0px;
+    padding: 20px;
+    border-bottom: 2px rgba(13, 116, 116, 0.363) solid;
+}
+
+.hobbies {
+    padding: 20px;
+    display: flex;
+}
+
+.hobbies-btn {
+    order: 2;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hobbies-text {
+    padding-right: 20px;
 }
 
 .hide {
@@ -73,12 +99,13 @@ li span {
     padding: 8px 20px;
     text-align: center;
     font-size: medium;
-    margin-bottom: 3px;
+    margin: 3px;
     border-radius: 3px;
     color: rgb(148, 233, 212);
     background-color: rgb(13, 116, 116);
     cursor: pointer;
     font-family: inherit;
+    width: 120px;
 }
 
 button:active {
@@ -115,6 +142,16 @@ button:focus {
 
 @media (max-width: 1024px) {
     .about {
+        flex-direction: column;
+    }
+    
+    .hobbies-btn {
+        flex-direction: row;
+        order: 0;
+        flex-wrap: wrap;
+    }
+
+    .hobbies {
         flex-direction: column;
     }
 
