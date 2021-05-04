@@ -4,11 +4,11 @@
     width: 350px;
     height: 350px;
     margin: auto;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 .xo-square {
-    border: 4px solid rgb(2, 32, 32);
+    border: 4px solid rgb(9, 34, 46);
     background-color: rgb(22, 129, 124);
     position: relative;
     display: flex;
