@@ -7,7 +7,7 @@ body {
 
 a {
     text-decoration: none;
-    color:rgb(148, 233, 212)
+    color:rgb(148, 233, 212);
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
 
 .profilePicture {
     height: 250px;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 .section ul {
@@ -68,6 +68,10 @@ h1 {
     margin: 0px;
     padding: 20px;
     border-bottom: 2px rgba(13, 116, 116, 0.363) solid;
+}
+
+.about h2 {
+    color:rgb(148, 233, 212);
 }
 
 .hobbies {
@@ -140,6 +144,19 @@ button:focus {
 .navbar li:hover {
     color: white;
     background-color: rgba(100, 100, 100, 0.171);
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    color:rgb(148, 233, 212);
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
