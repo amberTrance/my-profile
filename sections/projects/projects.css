@@ -1,36 +1,52 @@
 .refContainer {
     margin: 30px;
     display: flex;
-}
-
-.refContainer h2, .refContainer span {
-    color: rgb(141, 218, 218);
-}
-
-.refContainer p {
-    color: white;
-}
-
-.refContainer a:hover {
-    color: white;
-}
-
-.tech {
-    color: rgb(235, 102, 53);
-}
-
-.refContainer li {
-    color:rgb(60, 85, 168);
-    margin: 10px;
+    color: white
 }
 
 .refBox {
     padding: 35px;
-    background-color: rgba(128, 128, 128, 0.185);
+    background-color: rgb(15, 15, 15);
     margin: 10px;
     border-radius: 10px;
     word-wrap: break-word;
 }
+
+.refBox h2 {
+    text-align: center;
+    color: rgb(141, 218, 218);
+}
+
+.tech {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tech p {
+    border: 1px solid grey;
+    color: lightgrey;
+    padding: 12px;
+    margin: 6px;
+}
+
+.view {
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    background-color: rgb(13, 116, 116);
+}
+
+.view:hover {
+    background-color: rgb(90, 90, 90);
+}
+
 
 @media (max-width: 1000px) {
     .refContainer {
